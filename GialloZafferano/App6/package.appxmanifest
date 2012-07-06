@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="f981a423-d98e-4b34-9166-9306d8d5afd5" Version="1.0.0.0" Publisher="CN=01tribe" />
+  <Properties>
+    <DisplayName>GialloZafferano</DisplayName>
+    <PublisherDisplayName>01tribe</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.0</OSMinVersion>
+    <OSMaxVersionTested>6.2.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="default.html">
+      <VisualElements DisplayName="Giallo Zafferno" Logo="images\@Logo.scale-100.png" SmallLogo="images\@SmallLogo.scale-100.png" Description="Giallo Zafferno" ForegroundText="light" BackgroundColor="#ffffff">
+        <DefaultTile ShowName="allLogos" ShortName="Giallo Zafferano" WideLogo="images\@WideLogo.scale-100.png" />
+        <SplashScreen Image="images\SplashScreen.scale-100.png" BackgroundColor="#a200ff" />
+      </VisualElements>
+      <Extensions>
+        <Extension Category="windows.search" />
+        <Extension Category="windows.fileTypeAssociation">
+          <FileTypeAssociation Name="data">
+            <SupportedFileTypes>
+              <FileType>.dat</FileType>
+            </SupportedFileTypes>
+          </FileTypeAssociation>
+        </Extension>
+      </Extensions>
+      <ApplicationContentUriRules>
+        <Rule Match="http://api.giallozafferano.it/*" Type="include" />
+        <Rule Match="http://www.giallozafferano.it/*" Type="include" />
+      </ApplicationContentUriRules>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="picturesLibrary" />
+    <Capability Name="documentsLibrary" />
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>
