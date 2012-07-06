@@ -338,22 +338,30 @@
     
     // downloadAndSave();
     function getImageurl(img, destintation) {
-
+        var pic;
         WinJS.xhr({ url: img, responseType: "blob" })
-        .done(
+        .then(
             function (request) {
                 var imageBlob = URL.createObjectURL(request.response);
-                console.log(imageBlob);
-                var imageTag = document.createElement("image");
-                imageTag.src = imageBlob;
-                $(destintation).append(imageTag);
-                /*  $("#mydiv").append(imageTag);
-                  console.log($("#mydiv"));*/
-
-            });
+                pic=imageBlob;
+                /*console.log(imageBlob);
+               var imageTag = document.createElement("image");
+               imageTag.src = imageBlob;
+               $(destintation).append(imageTag);
+                $("#mydiv").append(imageTag);
+                 console.log($("#mydiv"));*/
+                
+            }).then(
+             function (request) {
+                 return pic;
+             }
+            ) // Called if the WinJS.xhr funtion returned an error. 
+        
+           
+      
 
     }
 
-    getImageurl("http://www.giallozafferano.it/images/ricette/19/1943/preview.jpg", "#mydiv");
+    console.log(getImageurl("http://www.giallozafferano.it/images/ricette/19/1943/preview.jpg", "#mydiv"));
 
 })();

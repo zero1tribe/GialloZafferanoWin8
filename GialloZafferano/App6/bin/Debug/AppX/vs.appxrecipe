@@ -147,7 +147,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\01tribe\Documents\GitHub\GialloZafferanoWin8\GialloZafferano\App6\js\data.js">
       <PackagePath>js\data.js</PackagePath>
-      <Modified>2012-07-06T08:48:34.467</Modified>
+      <Modified>2012-07-06T09:09:48.049</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\01tribe\Documents\GitHub\GialloZafferanoWin8\GialloZafferano\App6\js\default.js">
       <PackagePath>js\default.js</PackagePath>
